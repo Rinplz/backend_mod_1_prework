@@ -12,7 +12,7 @@ cars_not_driven = cars - drivers
 cars_driven = drivers
 #calculates how many total available seats there are
 carpool_capacity = cars_driven * space_in_a_car
-#calculates how we'd have to split 
+#calculates how we'd have to split
 average_passengers_per_car = passengers / cars_driven
 
 puts "There are #{cars} cars available."
