@@ -16,16 +16,18 @@ class Burrito
     available_toppings = ['cheese','salsa','guacamole','lettuce','sour cream']
     held_top_index = available_toppings.index(available_toppings.sample())
     held_topping = available_toppings[held_top_index]
+    top_available = available_toppings.length
     counter = 0
 
-    until counter == available_toppings.length - 1
+    until counter == top_available
       if held_topping == @toppings[counter]
         available_toppings.delete_at(held_top_index)
         held_top_index = available_toppings.index(available_toppings.sample())
         held_topping = available_toppings[held_top_index]
         counter = 0
+      else
+        counter += 1
       end
-      counter += 1
     end
 
     p "Adding #{held_topping} to burrito..."
